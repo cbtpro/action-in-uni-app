@@ -6,7 +6,9 @@
 					<image :src="item.author_avatar" mode="scaleToFill" class="news-list-logo"></image>
 					<view class="news-list-body">
 						<view class="news-list-text-top">{{item.title}}</view>
-						<view class="news-list-text-bottom uni-ellipsis">{{item.created_at}}</view>
+						<view class="news-list-text-bottom uni-ellipsis">
+							<past-time :time="item.created_at" mode="past"></past-time>
+						</view>
 					</view>
 				</view>
 			</view>
